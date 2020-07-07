@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -46,7 +46,17 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SignUpSide() {
   const classes = useStyles();
+  const [ firstname, setFirstName ] = useState('');
+  const [ lastname, setLastName ] = useState(''); 
+  const [ email, setEmail ] = useState('');
+  const [ password, setPassword ] = useState('');
 
+  const SignUp = () => {
+
+  }
+
+ 
+  
   return (
     <Grid container component="main" className={classes.root}>
       <CssBaseline />
@@ -69,6 +79,7 @@ export default function SignUpSide() {
               label="First name"
               name="firstname"
               autoFocus
+              onInput={e => setFirstName((e.target as HTMLTextAreaElement).value)}
             />
             <TextField
               variant="outlined"
@@ -79,6 +90,7 @@ export default function SignUpSide() {
               label="Last name"
               name="lastname"
               autoFocus
+              onInput={e => setLastName((e.target as HTMLTextAreaElement).value)}
             />
             <TextField
               variant="outlined"
@@ -90,6 +102,7 @@ export default function SignUpSide() {
               name="email"
               autoComplete="email"
               autoFocus
+              onInput={e => setEmail((e.target as HTMLTextAreaElement).value)}
             />
             <TextField
               variant="outlined"
@@ -101,6 +114,7 @@ export default function SignUpSide() {
               type="password"
               id="password"
               autoComplete="current-password"
+              onInput={e => setPassword((e.target as HTMLTextAreaElement).value)}
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
@@ -112,6 +126,7 @@ export default function SignUpSide() {
               variant="contained"
               color="primary"
               className={classes.submit}
+              
             >
               Sign Up
             </Button>
