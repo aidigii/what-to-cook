@@ -15,17 +15,18 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
-// didnt create with a fragment but unsure
+
 function createfields() {
   return (
     <TextField
       id="outlined-basic"
-      label="Enter Ingrediant"
+      label="Enter Ingredient"
       variant="outlined"
       placeholder="Carrot"
     />
   );
 }
+
 export default function MultilineTextFields() {
   const classes = useStyles();
   return (
