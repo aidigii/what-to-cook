@@ -11,36 +11,30 @@ import data from '../data';
 
 const useStyles = makeStyles({
     root: {
-      maxWidth: 345,
+      minWidth: 345,
+      margin: 20, 
     },
     media: {
       height: 140,
     },
   });
 
-  export default function RecipeCard() {
+
+
+  export default function RecipeCard(props: any) {
     const classes = useStyles();
-    const [title, setTitle] = useState('');
-    const [imge, setImage] = useState('');
 
-    useEffect(() => {
-        setTitle(data[0].title);
-        setImage(data[0].image);
-    }, []); 
-
-  
-   
     return (
       <Card className={classes.root}>
         <CardActionArea>
           <CardMedia
             className={classes.media}
-            image= {imge}
+            image={props.image}
             title="Contemplative Reptile"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
-              {title}
+            {props.title}
             </Typography>
 
           </CardContent>
