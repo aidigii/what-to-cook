@@ -26,7 +26,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 
 import User from "./user";
-import Ingrediants from "./Ingrediants";
+import Ingrediants from "./Ingredients";
 
 const drawerWidth = 240;
 

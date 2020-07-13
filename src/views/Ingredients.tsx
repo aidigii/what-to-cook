@@ -1,4 +1,5 @@
 import React from "react";
+import RecipeCard from '../components/recipe';
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import IconButton from "@material-ui/core/IconButton";
@@ -53,6 +54,7 @@ export default function MultilineTextFields() {
           </Grid>
         </Grid>
       </form>
+      <RecipeCard />
     </Grid>
   );
 }
