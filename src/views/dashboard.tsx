@@ -128,6 +128,7 @@ export default function Dashboard() {
   };
 
   const displaySavedRecipes = () => {
+    console.log('hello')
     setDisplay("saved");
   };
 
