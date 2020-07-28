@@ -26,7 +26,8 @@ import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 
 import User from "./user";
-import Ingrediants from "./Ingrediants";
+import Ingredients from "./Ingredients";
+import Bookmark from './bookmark';
 
 const drawerWidth = 240;
 
@@ -127,6 +128,7 @@ export default function Dashboard() {
   };
 
   const displaySavedRecipes = () => {
+    console.log('hello')
     setDisplay("saved");
   };
 
@@ -138,9 +140,9 @@ export default function Dashboard() {
     if (display == "user") {
       return <User />;
     } else if (display == "saved") {
-      console.log("saved");
+      return <Bookmark />
     } else if (display == "find") {
-      return <Ingrediants />;
+      return <Ingredients />;
     } else {
       console.log("other things");
     }
